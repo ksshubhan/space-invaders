@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// <summary>
+// Allows the player to move using right and left arrow keys
+// Establishes borders that the player's ship cannot cross
+// </summary>
+
 public class Move2D : MonoBehaviour
 {
 
     public float speed = 10.4f;
-
+    
     public GameObject topRightLimitGameObject;
     public GameObject bottomLeftLimitGameObject;
 

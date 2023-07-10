@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+// <summary>
+// When the space key is pressed the player's ship
+// is able to shoot bullets at the enemy ships 
+// </summary>
  
 public class ShootingBehaviour : MonoBehaviour
 {
