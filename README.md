@@ -68,6 +68,15 @@ The Unity client never connects to the database directly. Each action (login, bu
 - **Inheritance for maze projectiles.** `MazeProjectileU`, `MazeProjectileD`, `MazeProjectileL` and `MazeProjectileR` each extend `MazeProjectile` and set only their own direction, speed and spawn point. Collision handling is shared in the base class.
 - **Singleton managers.** `GameManager`, `MazeManager` and `ScenesManager` expose a single static instance, so any script can report events such as an invader being killed without needing a reference wired up in the editor.
 
+## What I learned
+
+- **Building the maze was the hardest part.** Implementing depth-first search was hard enough, but turning it into real game objects was another challenge. My first approach treated each cell as a single object, which didn't work. Giving every cell four separate walls is what let the algorithm work, and I came to realise how important it was to keep track of each cell's neighbours.
+- **This project was full of firsts.** It was my first time using Unity, PHP and a database. Seeing points and titles carry over between game sessions, saved in MySQL and passed to the game as JSON, was really satisfying.
+- **I kept the look true to the original.** I tried to match the arcade game as closely as possible, which meant tracking down sprites that matched the originals.
+- **One idea didn't make it in.** I originally planned a third mode in which two players each control a ship and try to shoot each other down.
+- **Looking back, I'd use Git properly.** I wasn't familiar with it at the time. It would have made the project much easier to maintain and track, and the original Unity project was lost with my old laptop. The scripts in this repository survive only because they were printed in my write-up.
+- **I'd also rework the pathfinding.** Adding a distance heuristic would make it true A*, and a binary heap would make the priority queue more efficient.
+
 ## Repository layout
 
 ```
